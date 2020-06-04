@@ -2,11 +2,6 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.openqa.selenium.By.cssSelector;
 
 public class AboutUsPage extends BasePage {
@@ -16,7 +11,7 @@ public class AboutUsPage extends BasePage {
     final By aboutUsInfo = cssSelector(".stat-foot");
 
     public void aboutUsLink() {
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,2500)");
+        ((JavascriptExecutor) SharedDriver.getWebDriver()).executeScript("window.scrollBy(0,2500)");
         waitForExpectedElement(aboutUs, DRIVER_WAIT_TIME).click();
     }
 
