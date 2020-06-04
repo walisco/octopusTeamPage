@@ -13,6 +13,8 @@ Feature: Octopus investment platform
       | Jonathan Digges | Chief Investment Officer |
       | Jonathan Dees   | Chief Operations Officer |
     And I can see text for Investor "Contact our team" on page
+    And I click About us I can see
+      | 2000 Octopus was founded | £8.6bn worth of funds under management*† |
 
 
 

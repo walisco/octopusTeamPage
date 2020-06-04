@@ -3,12 +3,10 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 import java.util.*;
 
 import static org.openqa.selenium.By.cssSelector;
-import static org.openqa.selenium.By.xpath;
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class TeamPage extends BasePage {
@@ -23,6 +21,9 @@ public class TeamPage extends BasePage {
     final By profileNames = cssSelector(".profileCard-name");
     final By profileRoles = cssSelector(".profileCard-title");
     final By findLocalContact = cssSelector(".wp-block-button__link");
+    final By aboutUs = cssSelector("#menu-item-3033 a");
+    final By aboutUsText = cssSelector(".stat-body");
+    final By aboutUsInfo = cssSelector(".stat-foot");
 
 
     public void openTeamPage() {
@@ -46,7 +47,7 @@ public class TeamPage extends BasePage {
         }
     }
 
-    public void clickModalConfirm(String customerType) {
+    public void clickModalConfirm(String customerType) throws InterruptedException {
         if (customerType.equalsIgnoreCase("investor")) {
             waitForExpectedElement(confirmInvester, DRIVER_WAIT_TIME).click();
         } else {
@@ -79,8 +80,29 @@ public class TeamPage extends BasePage {
     }
 
     public void clickLocalSearch() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,0)");
+        Thread.sleep(7000);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,2500)");
         waitForExpectedElement(findLocalContact, DRIVER_WAIT_TIME).click();
     }
 
+    public void aboutUsLink() {
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,2500)");
+        waitForExpectedElement(aboutUs, DRIVER_WAIT_TIME).click();
+    }
+
+    public String aboutUsLinkYr() {
+
+
+        String year = waitForExpectedElements(aboutUsText, DRIVER_WAIT_TIME).get(0).getText();
+        String yearInfo = waitForExpectedElements(aboutUsInfo, DRIVER_WAIT_TIME).get(0).getText();
+        return year.concat(" ").concat(yearInfo);
+    }
+    public String aboutUsLinkFunds() {
+
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,2500)");
+        String fund = waitForExpectedElements(aboutUsText, DRIVER_WAIT_TIME).get(1).getText();
+        String fundInfo = waitForExpectedElements(aboutUsInfo, DRIVER_WAIT_TIME).get(1).getText();
+        return fund.concat(" ").concat(fundInfo);
+    }
 }

@@ -76,4 +76,5 @@ public class TeamStep {
     public void iConfirmSelection(String customerType) throws Throwable {
         teamPage.clickModalConfirm(customerType);
     }
+
 }
