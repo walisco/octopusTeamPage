@@ -20,51 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e599a053-fc6c-40f9-a6dc-b241ea858e29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/octopusTeamPage.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/octopusTechTask.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/cucumber-reports/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/cucumber.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/site/cucumber-pretty/formatter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/site/cucumber-pretty/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/site/cucumber-pretty/jquery-1.8.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/site/cucumber-pretty/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/site/cucumber-pretty/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/browsers/chromedriver/mac/chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/testRunner/testRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/features/octopusInvestment.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/LocalSearchPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/Props.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SharedDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/TeamPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/LocalSearchStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/TeamStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/hooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/config/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/testRunner/testRunner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/octopusTechTask-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/BasePage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/LocalSearchPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/Props.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/SharedDriver$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/SharedDriver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/TeamPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/LocalSearchStep.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/TeamStep.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/hooks.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +130,7 @@
       <workItem from="1591258333721" duration="16639000" />
       <workItem from="1591276440665" duration="173000" />
       <workItem from="1591276865253" duration="255000" />
+      <workItem from="1591277173850" duration="365000" />
     </task>
     <servers />
   </component>
@@ -188,6 +147,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
