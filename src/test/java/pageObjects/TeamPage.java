@@ -26,32 +26,38 @@ public class TeamPage extends BasePage {
 
 
     public void openTeamPage() {
-        driver.manage().deleteAllCookies();
         driver.navigate().to("https://octopusinvestments.com/about-us/leadership-team/");
-//        return initElements(driver, TeamPage.class);
     }
+
     public void clickModalSelectorPopup(String customerType) {
         switch (customerType.toLowerCase()) {
-            case "adviser":{ waitForExpectedElement(modalSelectorAdviser,DRIVER_WAIT_TIME).click();
-                waitForExpectedElement(confirmAdviser, DRIVER_WAIT_TIME).click();
-                break;}
-            case "investor" :waitForExpectedElement(modalSelectorInvestor,DRIVER_WAIT_TIME).click();
-                waitForExpectedElement(confirmInvester, DRIVER_WAIT_TIME).click();
+            case "adviser": {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", waitForExpectedElement(modalSelectorAdviser, DRIVER_WAIT_TIME));
+                waitForExpectedElement(modalSelectorAdviser, DRIVER_WAIT_TIME).click();
+//                waitForExpectedElement(confirmAdviser, DRIVER_WAIT_TIME).click();
                 break;
-            default: System.out.println("unknown");
+            }
+            case "investor":
+                waitForExpectedElement(modalSelectorInvestor, DRIVER_WAIT_TIME).click();
+//                waitForExpectedElement(confirmInvester, DRIVER_WAIT_TIME).click();
+                break;
+            default:
+                System.out.println("unknown");
         }
-//        if(customerType == "Adviser") {
-//            waitForExpectedElement(modalSelectorAdviser,DRIVER_WAIT_TIME).click();
-//            waitForExpectedElement(confirmAdviser, DRIVER_WAIT_TIME).click();
-//        } else {
-//            waitForExpectedElement(modalSelectorInvestor,DRIVER_WAIT_TIME).click();
-//            waitForExpectedElement(confirmInvester, DRIVER_WAIT_TIME).click();
-//        }
+    }
+
+    public void clickModalConfirm(String customerType) {
+        if (customerType.equalsIgnoreCase("investor")) {
+            waitForExpectedElement(confirmInvester, DRIVER_WAIT_TIME).click();
+        } else {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", waitForExpectedElement(modalSelectorAdviser, DRIVER_WAIT_TIME));
+            waitForExpectedElement(confirmAdviser, DRIVER_WAIT_TIME).click();
+        }
     }
 
     public String viewCustomerAdviserType() throws InterruptedException {
-        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 2500);");
-            return waitForExpectedElement(adviserContactInformation, DRIVER_WAIT_TIME).getText();
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 2000);");
+        return waitForExpectedElement(adviserContactInformation, DRIVER_WAIT_TIME).getText();
 
     }
 
@@ -66,7 +72,7 @@ public class TeamPage extends BasePage {
         List<WebElement> profiles = waitForExpectedElements(profileNames, DRIVER_WAIT_TIME);
         List<WebElement> profilesRoles = waitForExpectedElements(profileRoles, DRIVER_WAIT_TIME);
         List<String> profileName = new ArrayList<String>();
-        for(int i = 0; i<4; i++ ){
+        for (int i = 0; i < 4; i++) {
             profileName.add(profiles.get(i).getText().concat("-").concat(profilesRoles.get(i).getText()));
         }
         return profileName;

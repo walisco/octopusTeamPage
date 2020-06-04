@@ -37,6 +37,12 @@ public class TeamStep {
     }
 
 
+    @Given("^I click on the modal popup as an \"([^\"]*)\"$")
+    public void iClickOnTheModalPopupAsAn(String customerType) throws Throwable {
+        teamPage.clickModalSelectorPopup(customerType);
+    }
+
+
 //    @Then("^I can see \"([^\"]*)\" and \"([^\"]*)\" on page$")
 //    public void iCanSeeAndOnPage(String customerType, String contactLink) throws Throwable {
 //        assertEquals(teamPage.viewCustomerType(customerType), contactLink);
@@ -46,9 +52,9 @@ public class TeamStep {
     public void iCanSeeTheFollowingChiefOfficers(DataTable profiles) {
         List<List<String>> data = profiles.raw();
 
-        assertTrue(data.get(0).get(0)+" not matched to actual information",teamPage.checkTeamName().contains(data.get(0).get(0).concat("-").concat(data.get(0).get(1))));
-        assertTrue(data.get(1).get(0)+" not matched to actual information",teamPage.checkTeamName().contains(data.get(1).get(0).concat("-").concat(data.get(1).get(1))));
-        assertTrue(data.get(2).get(0)+" not matched to actual information",teamPage.checkTeamName().contains(data.get(2).get(0).concat("-").concat(data.get(2).get(1))));
+        assertTrue(data.get(0).get(0) + " not matched to actual information", teamPage.checkTeamName().contains(data.get(0).get(0).concat("-").concat(data.get(0).get(1))));
+        assertTrue(data.get(1).get(0) + " not matched to actual information", teamPage.checkTeamName().contains(data.get(1).get(0).concat("-").concat(data.get(1).get(1))));
+        assertTrue(data.get(2).get(0) + " not matched to actual information", teamPage.checkTeamName().contains(data.get(2).get(0).concat("-").concat(data.get(2).get(1))));
     }
 
     @And("^I click on \"([^\"]*)\"$")
@@ -64,5 +70,10 @@ public class TeamStep {
     @When("^I can see text for Adviser \"([^\"]*)\" on page$")
     public void iCanSeeTextForAdviserOnPage(String contactLink) throws Throwable {
         assertEquals(teamPage.viewCustomerAdviserType(), contactLink);
+    }
+
+    @And("^I confirm \"([^\"]*)\" selection$")
+    public void iConfirmSelection(String customerType) throws Throwable {
+        teamPage.clickModalConfirm(customerType);
     }
 }
