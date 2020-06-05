@@ -111,6 +111,10 @@ public class SharedDriver extends EventFiringWebDriver {
             DRIVER_PATH = DRIVER_ROOT + FILE_SEPARATOR + "geckodriver"
                     + FILE_SEPARATOR + "win32" + FILE_SEPARATOR
                     + "geckodriver.exe";
+        }else if (BROWSER.equals("chrome") && PLATFORM.contains("linux")) {
+            DRIVER_PATH = DRIVER_ROOT + FILE_SEPARATOR + "chromedriver"
+                    + FILE_SEPARATOR + "linux" + FILE_SEPARATOR
+                    + "chromedriver";
         }
 
         return DRIVER_PATH;

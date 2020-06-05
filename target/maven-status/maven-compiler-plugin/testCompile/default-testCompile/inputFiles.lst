@@ -1,8 +1,4 @@
-C:\Users\w_ade\IdeaProjects\octopusTechTask\src\test\java\stepDefinitions\TeamStep.java
-C:\Users\w_ade\IdeaProjects\octopusTechTask\src\test\java\pageObjects\SharedDriver.java
-C:\Users\w_ade\IdeaProjects\octopusTechTask\src\test\java\utilities\hooks.java
-C:\Users\w_ade\IdeaProjects\octopusTechTask\src\test\java\pageObjects\Props.java
-C:\Users\w_ade\IdeaProjects\octopusTechTask\src\test\java\pageObjects\BasePage.java
-C:\Users\w_ade\IdeaProjects\octopusTechTask\src\test\java\pageObjects\TeamPage.java
-C:\Users\w_ade\IdeaProjects\octopusTechTask\src\test\java\stepDefinitions\LocalSearchStep.java
-C:\Users\w_ade\IdeaProjects\octopusTechTask\src\test\java\pageObjects\LocalSearchPage.java
+/home/adewale/Documents/octopusTeamPage/src/test/java/testRunner/testRunner.java
+/home/adewale/Documents/octopusTeamPage/src/test/java/stepDefinitions/TeamStep.java
+/home/adewale/Documents/octopusTeamPage/src/test/java/hooks/hooks.java
+/home/adewale/Documents/octopusTeamPage/src/test/java/stepDefinitions/AboutUsStep.java

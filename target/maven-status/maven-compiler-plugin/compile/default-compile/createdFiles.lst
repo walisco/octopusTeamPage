@@ -1,1 +1,6 @@
-testRunner\testRunner.class
+pageObjects/Props.class
+pageObjects/SharedDriver$1.class
+pageObjects/BasePage.class
+pageObjects/AboutUsPage.class
+pageObjects/SharedDriver.class
+pageObjects/TeamPage.class

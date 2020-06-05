@@ -1,9 +1,4 @@
-stepDefinitions\TeamStep.class
-pageObjects\BasePage.class
-pageObjects\SharedDriver.class
-utilities\hooks.class
-pageObjects\SharedDriver$1.class
-stepDefinitions\LocalSearchStep.class
-pageObjects\LocalSearchPage.class
-pageObjects\TeamPage.class
-pageObjects\Props.class
+stepDefinitions/AboutUsStep.class
+testRunner/testRunner.class
+stepDefinitions/TeamStep.class
+hooks/hooks.class
