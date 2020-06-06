@@ -9,6 +9,7 @@ Feature: Octopus investment platform
     Given I click on the modal popup as an "investor"
     And I confirm "investor" selection
     Then I can see the following chief officers:
+      | Name            | Title                    |
       | Ruth Handcock   | Chief Executive Officer  |
       | Jonathan Digges | Chief Investment Officer |
       | Jonathan Dees   | Chief Operations Officer |

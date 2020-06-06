@@ -4,7 +4,10 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.*;
 import pageObjects.TeamPage;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -35,12 +38,8 @@ public class TeamStep {
     }
 
     @Then("^I can see the following chief officers:$")
-    public void iCanSeeTheFollowingChiefOfficers(DataTable profiles) {
-        List<List<String>> data = profiles.raw();
-
-        assertTrue(data.get(0).get(0) + " not matched to actual information", teamPage.checkTeamName().contains(data.get(0).get(0).concat("-").concat(data.get(0).get(1))));
-        assertTrue(data.get(1).get(0) + " not matched to actual information", teamPage.checkTeamName().contains(data.get(1).get(0).concat("-").concat(data.get(1).get(1))));
-        assertTrue(data.get(2).get(0) + " not matched to actual information", teamPage.checkTeamName().contains(data.get(2).get(0).concat("-").concat(data.get(2).get(1))));
+    public void iCanSeeTheFollowingChiefOfficers(List<Map<String, String>> data) {
+        teamPage.checkTeamName(data);
     }
 
     @Then("^I can see text for Investor \"([^\"]*)\" on page$")

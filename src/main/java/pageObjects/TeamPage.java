@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.*;
 
+import static org.junit.Assert.assertEquals;
 import static org.openqa.selenium.By.cssSelector;
 
 public class TeamPage extends BasePage {
@@ -58,15 +59,18 @@ public class TeamPage extends BasePage {
         return waitForExpectedElement(investorContactInformation, DRIVER_WAIT_TIME).getText();
     }
 
-    public List<String> checkTeamName() {
+    public void checkTeamName(List<Map<String, String>> data) {
 
         ((JavascriptExecutor) SharedDriver.getWebDriver()).executeScript("window.scrollBy(0,700)");
         List<WebElement> profiles = waitForExpectedElements(profileNames, DRIVER_WAIT_TIME);
         List<WebElement> profilesRoles = waitForExpectedElements(profileRoles, DRIVER_WAIT_TIME);
-        List<String> profileName = new ArrayList<String>();
-        for (int i = 0; i < 4; i++) {
-            profileName.add(profiles.get(i).getText().concat("-").concat(profilesRoles.get(i).getText()));
+        for (int i = 0; i < 3; i++) {
+            String name= data.get(i).get("Name");
+            String role= data.get(i).get("Title");
+            String profileName = profiles.get(i).getText();
+            String profileRole = profilesRoles.get(i).getText();
+            assertEquals(name,profileName);
+            assertEquals(role,profileRole);
         }
-        return profileName;
     }
 }
